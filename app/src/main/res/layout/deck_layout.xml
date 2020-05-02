@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/deckText"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:text="Deck Charge\n(kg)"
+        app:layout_constraintEnd_toStartOf="@+id/deckEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".3"
+        android:gravity="center_vertical"/>
+    <EditText
+        android:id="@+id/deckEditText"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toEndOf="@+id/deckText"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".7"
+        android:hint="Enter value of deck charge"
+        android:inputType="numberDecimal"/>
+    <TextView
+        android:id="@+id/typeOfChargeText"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:text="Type of charge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/deckChargeSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/deckText"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".3"
+        android:gravity="center_vertical"/>
+    <Spinner
+        android:id="@+id/deckChargeSpinner"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toBottomOf="@+id/deckEditText"
+        app:layout_constraintStart_toEndOf="@+id/typeOfChargeText"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".7"/>
+    <TextView
+        android:id="@+id/deckStemmingText"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:text="Deck Stemming\n(m)"
+        app:layout_constraintEnd_toStartOf="@+id/deckStemmingEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/typeOfChargeText"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".3"
+        android:gravity="center_vertical"/>
+    <EditText
+        android:id="@+id/deckStemmingEditText"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toEndOf="@+id/deckStemmingText"
+        app:layout_constraintTop_toBottomOf="@id/deckChargeSpinner"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".7"
+        android:hint="Enter value of deck1 stemming"
+        android:inputType="numberDecimal"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
